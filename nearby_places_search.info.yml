@@ -1,0 +1,5 @@
+name: Nearby places search
+type: module
+description: Nearby Places Search by place types with Google Map API
+core: 8.x
+package: Other

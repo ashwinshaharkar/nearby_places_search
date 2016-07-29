@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains nearby_places_search.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function nearby_places_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the nearby_places_search module.
+    case 'help.page.nearby_places_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('ashwin') . '</p>';
+      return $output;
+
+    default:
+  }
+}
