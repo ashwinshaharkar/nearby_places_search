@@ -1,17 +1,17 @@
-
-# In order to to create pages it is necessary to define routes for them.
-# A route maps a URL path to a controller. It defines what function
-# or method will be called when a URL is accessed.
-# If the user accesses http://drupal8.dev//nearby_places_search/hello/{name}, the routing
-# system will look for a route with that path. In this case it will find a
-# match, and execute the _controller callback. In this case the callback is
-# defined as a classname
-# ("\Drupal\nearby_places_search\Controller\NearbyPlacesSearchController")
-# and a method ("nearbyPlacesSearch").
-nearby_places_search.nearby_places_search_controller_nearbyPlacesSearch:
-  path: '/nearby_places_search/hello/{name}'
+nearby_places_search.admin_settings:
+  path: '/admin/config/nearby_places_search/settings'
   defaults:
-    _controller: '\Drupal\nearby_places_search\Controller\NearbyPlacesSearchController::nearbyPlacesSearch'
+    _form: '\Drupal\nearby_places_search\Form\NearbyPlacesSearchForm'
     _title: 'Nearby places search'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+nearby_places_search_block_form:
+  path: '/nearby-places-search-block-form'
+  defaults:
+    _form: 'Drupal\nearby_places_search\Form\NearbyPlacesSearchBlockForm'
+    _title: ''
   requirements:
     _permission: 'access content'

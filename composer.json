@@ -1,14 +1,21 @@
 {
   "name": "drupal/nearby_places_search",
+  "description": "Nearby places search by place types with Google Map API.",
   "type": "drupal-module",
-  "description": "Nearby Places Search by place types with Google Map API",
-  "keywords": ["Drupal"],
-  "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/nearby_places_search",
-  "minimum-stability": "dev",
+  "homepage": "http://drupal.org/project/nearby_places_search",
+  "authors": [
+    {
+      "name": "Ashwin Shaharkar",
+      "homepage": "https://www.drupal.org/u/ashwinshaharkar",
+      "role": "Maintainer"
+    }
+  ],
   "support": {
-    "issues": "http://drupal.org/project/issues/nearby_places_search",
-    "source": "http://cgit.drupalcode.org/nearby_places_search"
+    "issues": "https://www.drupal.org/project/issues/nearby_places_search"
   },
-  "require": { }
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/libraries": "8.*"
+  }
 }
