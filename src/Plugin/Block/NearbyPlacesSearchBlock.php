@@ -13,15 +13,17 @@ use Drupal\Core\Block\BlockBase;
  * category = @Translation("Blocks")
  * )
  */
-class NearbyPlacesSearchBlock extends BlockBase {
+class NearbyPlacesSearchBlock extends BlockBase
+{
 
-  /**
-   * {@inheritdoc}
-   */
-  public function build() {
-    $build = [];
-    $build['form'] = \Drupal::formBuilder()->getForm('Drupal\nearby_places_search\Form\NearbyPlacesSearchBlockForm');
-    return $build;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function build()
+    {
+        $build = [];
+        $build['form'] = \Drupal::formBuilder()->getForm('Drupal\nearby_places_search\Form\NearbyPlacesSearchBlockForm');
+        return $build;
+    }
 
 }

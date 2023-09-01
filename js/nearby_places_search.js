@@ -133,7 +133,7 @@ jQuery(document).ready(function () {
 
   function showMap() {
     var input_addr = jQuery('#edit-address').val();
-    geocoder.geocode({address: input_addr}, function (results, status) {
+    geocoder.geocode({ address: input_addr }, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
@@ -157,7 +157,7 @@ jQuery(document).ready(function () {
           });
 
           google.maps.event.addListener(marker, 'dragend', function () {
-            var obj = {latLng: marker.getPosition()};
+            var obj = { latLng: marker.getPosition() };
             geocoder.geocode(obj, function (results, status) {
               if (status === google.maps.GeocoderStatus.OK) {
                 showDragMarker(results[0], marker.getPosition().lat(), marker.getPosition().lng());
@@ -174,7 +174,7 @@ jQuery(document).ready(function () {
         }
       }
       else {
-        alert(Drupal.t('Geocoder failed due to: @status', {'@status': status}));
+        alert(Drupal.t('Geocoder failed due to: @status', { '@status': status }));
       }
     });
   }
