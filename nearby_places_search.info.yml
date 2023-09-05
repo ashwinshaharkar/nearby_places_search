@@ -8,3 +8,8 @@ dependencies:
   - libraries:libraries
   - drupal:node
   - drupal:block
+
+# Information added by Drupal.org packaging script on 2023-08-31
+version: '3.0.1'
+project: 'nearby_places_search'
+datestamp: 1693488368
